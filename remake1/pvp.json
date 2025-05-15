@@ -1,0 +1,20 @@
+{
+  "background_image": "../resources/img/page/game.png",
+  "ball_images":
+  [
+  "../resources/img/component/ball/ball_0.png",
+  "../resources/img/component/ball/ball_1.png",
+  "../resources/img/component/ball/ball_2.png",
+  "../resources/img/component/ball/ball_3.png",
+  "../resources/img/component/ball/ball_4.png"
+  ],
+  "paddle_image": "../resources/img/component/paddle/paddle.png",
+  "fps": 30,
+  "mode": "PVP",
+  "max_scores": 1,
+  "ball_speed": 5,
+  "paddle_speed": 5,
+  "render": true,
+  "save": true,
+  "save_dir": "../history/pvp"
+}

@@ -36,7 +36,7 @@ speedmode = 1  # 速度模式
 myfont = pygame.font.Font(None, 30)  # 设置字体以及大小
 long_press = {'up': False, 'down': False}  # 实现连续移动
 long_press2 = {'up': False, 'down': False}
-bg = pygame.image.load("resources/img/page/game.png")  # 设置背景图片
+bg = pygame.image.load("../resources/img/page/game.png")  # 设置背景图片
 
 score1 = 0  # 设置初始得分
 score2 = 0
@@ -48,38 +48,38 @@ b = screen.get_height()  # 获取屏幕高度
 pygame.display.set_caption("双人弹球")  # 标题名
 fps: int = 100  # 刷新速度
 # 生成 surface对象以及rect对象
-ball = pygame.image.load("resources/img/component/ball/ball_0.png")    # 小球运动动图
+ball = pygame.image.load("../resources/img/component/ball/ball_0.png")    # 小球运动动图
 ballrect = ball.get_rect()
-ball1 = pygame.image.load("resources/img/component/ball/ball_1.png")
-ball2 = pygame.image.load("resources/img/component/ball/ball_2.png")
-ball3 = pygame.image.load("resources/img/component/ball/ball_3.png")
-ball4= pygame.image.load("resources/img/component/ball/ball_4.png")
+ball1 = pygame.image.load("../resources/img/component/ball/ball_1.png")
+ball2 = pygame.image.load("../resources/img/component/ball/ball_2.png")
+ball3 = pygame.image.load("../resources/img/component/ball/ball_3.png")
+ball4= pygame.image.load("../resources/img/component/ball/ball_4.png")
 
-win1 = pygame.image.load("resources/img/component/win/player1_win.png")
-win2 = pygame.image.load("resources/img/component/win/player2_win.png")
-start = pygame.image.load("resources/img/page/start.png")
-banzi1 = pygame.image.load("resources/img/component/player/player.png")
+win1 = pygame.image.load("../resources/img/component/win/player1_win.png")
+win2 = pygame.image.load("../resources/img/component/win/player2_win.png")
+start = pygame.image.load("../resources/img/page/start.png")
+banzi1 = pygame.image.load("../resources/img/component/paddle/paddle.png")
 banzi1rect = banzi1.get_rect()
-banzi2 = pygame.image.load("resources/img/component/player/player.png")
+banzi2 = pygame.image.load("../resources/img/component/paddle/paddle.png")
 banzi2rect = banzi2.get_rect()
-redball = pygame.image.load("resources/img/component/red_prop/red_prop_1.png")
+redball = pygame.image.load("../resources/img/component/red_prop/red_prop_1.png")
 redballrect = redball.get_rect()
 
-barrier = pygame.image.load("resources/img/component/barrier/barrier_v.png")
+barrier = pygame.image.load("../resources/img/component/barrier/barrier_v.png")
 barrierrect = barrier.get_rect()
-barrier1 = pygame.image.load("resources/img/component/barrier/barrier_v.png")
+barrier1 = pygame.image.load("../resources/img/component/barrier/barrier_v.png")
 barrier1rect = barrier1.get_rect()
-barrier2 = pygame.image.load("resources/img/component/barrier/barrier_h.png")
+barrier2 = pygame.image.load("../resources/img/component/barrier/barrier_h.png")
 barrier2rect = barrier2.get_rect()
-barrier3 = pygame.image.load("resources/img/component/barrier/barrier_h.png")
+barrier3 = pygame.image.load("../resources/img/component/barrier/barrier_h.png")
 barrier3rect = barrier3.get_rect()
 
-jiantouleft = pygame.image.load("resources/img/component/tip/left.png")
-jiantouright = pygame.image.load("resources/img/component/tip/right.png")
-xuanzhong = pygame.image.load("resources/img/component/tip/selected.png")
-map1 = pygame.image.load("resources/img/component/map/map1.png")
-map2 = pygame.image.load("resources/img/component/map/map2.png")
-map3= pygame.image.load("resources/img/component/map/map3.png")
+jiantouleft = pygame.image.load("../resources/img/component/tip/left.png")
+jiantouright = pygame.image.load("../resources/img/component/tip/right.png")
+xuanzhong = pygame.image.load("../resources/img/component/tip/selected.png")
+map1 = pygame.image.load("../resources/img/component/map/map1.png")
+map2 = pygame.image.load("../resources/img/component/map/map2.png")
+map3= pygame.image.load("../resources/img/component/map/map3.png")
 
 
 banzi2rect = banzi2rect.move(a - 8, 500)  # 确认各对象初始位置
@@ -90,14 +90,14 @@ fclock = pygame.time.Clock()  # 计时
 
 pygame.mixer.init()  # 初始化音频文件
 
-music = pygame.mixer.music.load("resources/audio/bgm/main_bgm_1.mp3")      # 加载音乐文件
+music = pygame.mixer.music.load("../resources/audio/bgm/main_bgm_1.mp3")      # 加载音乐文件
 pygame.mixer.music.set_volume(0.01)  # 控制背景音乐声音大小
 pygame.mixer.music.play()  # 开始播放音乐流
-bang = pygame.mixer.Sound("resources/audio/sound_effect/hit.wav")
-pop = pygame.mixer.Sound("resources/audio/sound_effect/pop.wav")
-shao = pygame.mixer.Sound("resources/audio/sound_effect/whistle.wav")
-huanhu = pygame.mixer.Sound("resources/audio/sound_effect/cheer.wav")
-anjian = pygame.mixer.Sound("resources/audio/sound_effect/click.wav")
+bang = pygame.mixer.Sound("../resources/audio/sound_effect/hit.wav")
+pop = pygame.mixer.Sound("../resources/audio/sound_effect/pop.wav")
+shao = pygame.mixer.Sound("../resources/audio/sound_effect/whistle.wav")
+huanhu = pygame.mixer.Sound("../resources/audio/sound_effect/cheer.wav")
+anjian = pygame.mixer.Sound("../resources/audio/sound_effect/click.wav")
 
 while True:
     if pygame.mixer.music.get_busy() == False:  # 检查是否正在播放音乐
